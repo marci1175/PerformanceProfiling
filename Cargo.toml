@@ -1,6 +1,6 @@
 [package]
 name = "speed_test"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "This crate allows for easy performance profiling, seamlessly."
 license = "Apache-2.0"
