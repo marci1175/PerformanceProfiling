@@ -1,0 +1,40 @@
+
+2024-01-02 21:34:57.608431900 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in PT2.000086300S
+
+2024-01-02 21:36:38.958615400 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in PT2.000401700S
+
+2024-01-02 21:38:31.169912700 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000
+
+2024-01-02 21:39:09.685219400 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000 ms
+
+2024-01-02 21:53:36.151860200 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000367 ms
+
+2024-01-02 21:53:51.352556900 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000168 microsecs
+
+2024-01-02 21:54:26.615543400 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000381 microsecs(2000 ms)
+
+2024-01-02 21:55:13.040486700 +01:00
+Running function at: [src\main.rs:21], named: expensive_calculation(dur)
+[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
+Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000 ms (2000438 microsecs)

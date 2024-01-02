@@ -1,5 +1,6 @@
-use std::{time::Duration, thread::sleep};
+use std::{time::Duration, thread::sleep, fs::{self, OpenOptions}, path::PathBuf, io::Write};
 use speed_test::*;
+use chrono::{self, DateTime};
 
 fn expensive_calculation(dur: Duration) -> f64 {
 
@@ -13,10 +14,12 @@ fn expensive_calculation(dur: Duration) -> f64 {
 
 fn main() {
 
-    let dur = Duration::from_micros(4000);
+    let dur = Duration::from_secs(2);
 
     speed_test!(expensive_calculation(dur));
 
+    speed_test_log!(expensive_calculation(dur));
+    
 }
 
 #[test]
@@ -32,7 +35,7 @@ fn test() {
     );
 
     //Speed testing functions
-    speed_test!(
+    speed_test_log!(
         expensive_calculation(dur)
     );
 
