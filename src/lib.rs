@@ -1,3 +1,21 @@
+use std::{time::Duration, fmt::{Display, Debug}};
+
+pub struct TimeDisplay {
+    pub duration: Duration,
+}
+
+impl TimeDisplay {
+    pub fn new(dur: Duration) -> TimeDisplay {
+        TimeDisplay { duration: dur }
+    }
+}
+
+impl Display for TimeDisplay {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        self.duration.fmt(f)
+    }
+}
+
 #[macro_export]
 macro_rules! speed_test {
     ( $x:block ) => {

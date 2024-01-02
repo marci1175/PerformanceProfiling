@@ -1,22 +1,8 @@
-use std::{time::Duration, fmt::{Display, Debug}, thread::sleep};
+use std::{time::Duration, thread::sleep};
 use colour;
 use speed_test::*;
 
-struct TimeDisplay {
-    pub duration: Duration,
-}
 
-impl TimeDisplay {
-    fn new(dur: Duration) -> TimeDisplay {
-        TimeDisplay { duration: dur }
-    }
-}
-
-impl Display for TimeDisplay {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        self.duration.fmt(f)
-    }
-}
 
 fn expensive_calculation(dur: Duration) -> () {
 
