@@ -1,13 +1,13 @@
 use std::{time::Duration, thread::sleep};
 use speed_test::*;
 
-fn expensive_calculation(dur: Duration) -> () {
+fn expensive_calculation(dur: Duration) -> f64 {
 
     let calculation = 3461235000023.234423f64 / 234235.23423443554323;
 
     sleep(dur);
 
-    println!("{calculation}");
+    calculation
     
 }
 
