@@ -1,8 +1,5 @@
 use std::{time::Duration, thread::sleep};
-use colour;
 use speed_test::*;
-
-
 
 fn expensive_calculation(dur: Duration) -> () {
 

@@ -1,4 +1,5 @@
 use std::{time::Duration, fmt::{Display, Debug}};
+use colour;
 
 pub struct TimeDisplay {
     pub duration: Duration,
