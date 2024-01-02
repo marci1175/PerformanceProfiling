@@ -21,8 +21,21 @@ impl Display for TimeDisplay {
 macro_rules! speed_test {
     ( $x:block ) => {
         let now = std::time::Instant::now();
-        $x;
-        println!("{}", $crate::TimeDisplay::new(now.elapsed()));
+
+        //print place
+        $crate::colour::red_ln!("Running block at: [{}:{}]", file!(), line!());
+        
+        //Reset color
+        $crate::colour::white!();
+
+        //Display dbg like output
+        println!("[{}:{}] = {:#?}", file!(), line!(), $x);
+
+
+        $crate::colour::red!("Block ");
+        $crate::colour::green!("[{}:{}]", file!(), line!());
+        $crate::colour::red!(" finished in ");
+        $crate::colour::green_ln!("{}", $crate::TimeDisplay::new(now.elapsed()));
     };
     ( $function:expr ) => {
         let now = std::time::Instant::now();
@@ -32,7 +45,7 @@ macro_rules! speed_test {
         //Run function
         $crate::colour::white!();
         
-        $function;
+        println!("[{}:{}] {} = {:#?}", file!(), line!(), stringify!($function), $function);
 
         $crate::colour::red!("Function ");
         $crate::colour::green!("{}", stringify!($function));
