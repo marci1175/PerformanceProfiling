@@ -1,6 +1,5 @@
-use std::{time::Duration, thread::sleep, fs::{self, OpenOptions}, path::PathBuf, io::Write};
+use std::{time::Duration, thread::sleep, fs::OpenOptions, path::PathBuf, io::Write};
 use speed_test::*;
-use chrono::{self, DateTime};
 
 fn expensive_calculation(dur: Duration) -> f64 {
 
@@ -19,7 +18,7 @@ fn main() {
     speed_test!(expensive_calculation(dur));
 
     speed_test_log!(expensive_calculation(dur));
-    
+
 }
 
 #[test]
