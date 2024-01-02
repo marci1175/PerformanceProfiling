@@ -1,5 +1,5 @@
 use std::{time::Duration, fmt::{Display, Debug}};
-use colour;
+pub use colour;
 
 pub struct TimeDisplay {
     pub duration: Duration,
@@ -22,23 +22,24 @@ macro_rules! speed_test {
     ( $x:block ) => {
         let now = std::time::Instant::now();
         $x;
-        println!("{}", TimeDisplay::new(now.elapsed()));
+        println!("{}", $crate::TimeDisplay::new(now.elapsed()));
     };
     ( $function:expr ) => {
         let now = std::time::Instant::now();
-        colour::red!("Running function: ");
-        colour::green_ln!("{}", stringify!($function));
+        $crate::colour::red!("Running function: ");
+        $crate::colour::green_ln!("{}", stringify!($function));
 
         //Run function
-        colour::white!();
+        $crate::colour::white!();
+        
         $function;
 
-        colour::red!("Function ");
-        colour::green!("{}", stringify!($function));
-        colour::red!(" finished in ");
-        colour::green_ln!("{}", TimeDisplay::new(now.elapsed()));
+        $crate::colour::red!("Function ");
+        $crate::colour::green!("{}", stringify!($function));
+        $crate::colour::red!(" finished in ");
+        $crate::colour::green_ln!("{}", $crate::TimeDisplay::new(now.elapsed()));
 
         //Reset painter
-        colour::white!();
+        $crate::colour::white!();
     };
 }
