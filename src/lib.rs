@@ -67,8 +67,10 @@ macro_rules! speed_test {
 }
 
 #[macro_export]
-///With this macro you can log all the runtime detalis into a file located in CARGO_MAINFEST_DIR
+
+///With this macro you can log all the runtime detalis into a file located in binary's folder
 macro_rules! speed_test_log {
+    
     ( $x:block ) => {
 
         let now = $crate::chrono::Local::now();

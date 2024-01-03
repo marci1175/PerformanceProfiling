@@ -1,5 +1,0 @@
-
-2024-01-02 21:56:38.270215900 +01:00
-Running function at: [src\main.rs:21], named: expensive_calculation(dur)
-[src\main.rs:21]: expensive_calculation(dur) = 14776747.876278251
-Function at: [src\main.rs:21], named expensive_calculation(dur) finished in 2000 ms (2000406 microsecs)

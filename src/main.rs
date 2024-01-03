@@ -17,7 +17,11 @@ fn main() {
 
     speed_test!(expensive_calculation(dur));
 
-    speed_test_log!(expensive_calculation(dur));
+    speed_test!(
+        {
+            speed_test_log!(expensive_calculation(dur));
+        }
+    );
 
 }
 
